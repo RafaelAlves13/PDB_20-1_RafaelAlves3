@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="listaClientesPane" alignment="TOP_LEFT" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+         <children>
+            <ScrollPane layoutX="31.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: red;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="77.0">
+               <content>
+                  <HBox prefHeight="537.0" prefWidth="933.0">
+                     <children>
+                        <TableView fx:id="tabelaClientes" prefHeight="537.0" prefWidth="937.0">
+                           <columns>
+                              <TableColumn fx:id="cpfColumn" prefWidth="90.0" style="-fx-font-style: #FFF;" text="CPF" />
+                              <TableColumn fx:id="nomeColumn" prefWidth="217.0" text="Nome" />
+                              <TableColumn fx:id="dnColumn" prefWidth="101.0" text="Data Nascimento" />
+                              <TableColumn fx:id="emailColumn" prefWidth="168.0" text="E-mail" />
+                              <TableColumn fx:id="sexoColumn" minWidth="3.33331298828125" prefWidth="35.0" text="Sexo" />
+                              <TableColumn fx:id="telefoneColumn" prefWidth="116.0" text="Telefone" />
+                              <TableColumn fx:id="descricaoColumn" prefWidth="205.0" text="Descrição" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+            <AnchorPane prefHeight="56.0" prefWidth="1005.0">
+               <children>
+                  <Label layoutX="30.0" layoutY="6.0" text="Lista de Clientes" textFill="RED" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="6.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="anchorListHeader" prefHeight="23.0" prefWidth="500.0" style="-fx-background-color: red;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="55.0" />
+                  <TextField fx:id="inputCliente" layoutX="269.0" layoutY="13.0" prefHeight="31.0" prefWidth="205.0" style="-fx-padding: 2 10; -fx-border-color: red;" AnchorPane.rightAnchor="531.0" />
+                  <Button fx:id="pesquisarButton" layoutX="481.0" layoutY="14.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-text-fill: #FFF; -fx-blend-mode: red;">
+                           <image>
+                              <Image url="@img/search-icon-dark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="adicionarButton" layoutX="547.0" layoutY="6.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: red; -fx-text-fill: #FFF;" text="Adicionar">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editarButton" layoutX="699.0" layoutY="6.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: red; -fx-text-fill: #FFF;" text="Editar">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deletarButton" layoutX="855.0" layoutY="6.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: red; -fx-text-fill: #FFF;" text="Deletar ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

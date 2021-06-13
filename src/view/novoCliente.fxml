@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="novoClienteAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: rgba(0,0,0,0.25);" stylesheets="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/css/app.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.novoClienteController">
+   <children>
+      <AnchorPane layoutX="101.0" layoutY="50.0" prefHeight="564.0" prefWidth="700.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow color="#a4a2a2" height="12.1" radius="6.2925" width="15.07" />
+         </effect>
+         <children>
+            <TextField fx:id="nomeClienteField" layoutX="25.0" layoutY="28.0" prefHeight="55.0" prefWidth="650.0" promptText="Nome do Cliente" style="-fx-font-size: 26; -fx-padding: 20 30 10 30; -fx-background-color: red;" styleClass="textfield-editing" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label graphicTextGap="8.0" layoutX="30.0" layoutY="105.0" style="-fx-text-fill: #999;" text="CPF" AnchorPane.leftAnchor="30.0">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/checked-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="cpfClienteField" layoutX="30.0" layoutY="128.0" prefHeight="48.0" prefWidth="300.0" promptText="Somente números" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.leftAnchor="30.0" />
+            <Button alignment="CENTER" graphicTextGap="0.0" layoutX="644.0" layoutY="124.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="31.0" style="-fx-background-color: linear-gradient(to top,#f9f9f9,#ffffff); -fx-border-color: #f0f0f0;" AnchorPane.rightAnchor="30.0">
+               <graphic>
+                  <ImageView fitHeight="6.0" fitWidth="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/chevron-down-dark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label graphicTextGap="8.0" layoutX="30.0" layoutY="221.0" style="-fx-text-fill: #999;" text="E-mail" AnchorPane.leftAnchor="30.0">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/edit-file-16x16.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="emailClienteField" layoutX="30.0" layoutY="242.0" prefHeight="48.0" prefWidth="300.0" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.leftAnchor="30.0" />
+            <Label graphicTextGap="8.0" layoutX="382.0" layoutY="220.0" style="-fx-text-fill: #999;" text="Sexo">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/login-user-light-15x15.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label graphicTextGap="8.0" layoutX="385.0" layoutY="105.0" style="-fx-text-fill: #999;" text="Data de Nascimento">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/calendarIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="dataNascFiled" layoutX="380.0" layoutY="128.0" prefHeight="48.0" prefWidth="300.0" promptText="Somente números" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.rightAnchor="20.0" />
+            <VBox layoutX="308.0" layoutY="335.0" prefHeight="43.0" spacing="3.0" />
+            <Button fx:id="salvarButton" layoutX="93.0" layoutY="409.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="134.0" style="-fx-background-color: blue; -fx-text-fill: #FFF;" text="Salvar" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="30.0" />
+            <VBox layoutX="650.0" layoutY="335.0" prefHeight="43.0" spacing="3.0" AnchorPane.rightAnchor="30.0" />
+            <Button fx:id="cancelarButton" layoutX="399.0" layoutY="420.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="126.0" style="-fx-text-fill: #888;" text="Cancelar" AnchorPane.bottomAnchor="25.0" />
+            <Label graphicTextGap="8.0" layoutX="35.0" layoutY="426.0" style="-fx-text-fill: #999;" text="Observação (Opcional)">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/home-notification.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="observacaoClienteField" layoutX="40.0" layoutY="447.0" prefHeight="86.0" prefWidth="300.0" style="-fx-border-color: red;" styleClass="textfield-editing" />
+            <Group layoutX="399.0" layoutY="245.0">
+               <children>
+                  <RadioButton fx:id="masculinoRadioButton" mnemonicParsing="false" text="Masculino" textFill="RED" />
+                  <RadioButton fx:id="femininoRadioButton" layoutY="27.0" mnemonicParsing="false" text="Feminino" textFill="RED" />
+               </children>
+            </Group>
+            <Label graphicTextGap="8.0" layoutX="40.0" layoutY="321.0" style="-fx-text-fill: #999;" text="Telefone">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/edit-file-16x16.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="telefoneClienteFlied" layoutX="35.0" layoutY="344.0" prefHeight="48.0" prefWidth="300.0" promptText="Somente números" style="-fx-border-color: red;" styleClass="textfield-editing" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

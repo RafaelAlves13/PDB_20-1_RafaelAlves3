@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: rgba(0,0,0,0.25);" stylesheets="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/css/app.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.novoProdutoController">
+   <children>
+      <AnchorPane fx:id="fornecedorAnchorPane" layoutX="101.0" layoutY="51.0" prefHeight="564.0" prefWidth="700.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow color="#a4a2a2" height="12.1" radius="6.2925" width="15.07" />
+         </effect>
+         <children>
+            <TextField fx:id="nomeFornecedorField" layoutX="25.0" layoutY="28.0" prefHeight="55.0" prefWidth="650.0" promptText="Nome do Fornecedor" style="-fx-font-size: 26; -fx-padding: 20 30 10 30; -fx-background-color: red;" styleClass="textfield-editing" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label graphicTextGap="8.0" layoutX="25.0" layoutY="101.0" style="-fx-text-fill: #999;" text="CNPJ" AnchorPane.leftAnchor="30.0">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/checked-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="cnpjFornecedorField" layoutX="25.0" layoutY="122.0" prefHeight="40.0" prefWidth="300.0" promptText="Somente números" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.leftAnchor="30.0" />
+            <Button alignment="CENTER" graphicTextGap="0.0" layoutX="644.0" layoutY="124.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="31.0" style="-fx-background-color: linear-gradient(to top,#f9f9f9,#ffffff); -fx-border-color: #f0f0f0;" AnchorPane.rightAnchor="30.0">
+               <graphic>
+                  <ImageView fitHeight="6.0" fitWidth="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/chevron-down-dark.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label graphicTextGap="8.0" layoutX="25.0" layoutY="220.0" style="-fx-text-fill: #999;" text="E-mail" AnchorPane.leftAnchor="30.0">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/main-homepage-icon-14x12.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="emailFornecedorField" layoutX="25.0" layoutY="241.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.leftAnchor="30.0" />
+            <Label graphicTextGap="8.0" layoutX="385.0" layoutY="105.0" style="-fx-text-fill: #999;" text="Telefone">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/edit-file-16x16.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="telefoneFornecedorField" layoutX="380.0" layoutY="128.0" prefHeight="40.0" prefWidth="291.0" promptText="Somente números" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.rightAnchor="29.0" />
+            <VBox layoutX="308.0" layoutY="335.0" prefHeight="43.0" spacing="3.0" />
+            <Button fx:id="salvarButton" layoutX="93.0" layoutY="409.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="134.0" style="-fx-background-color: blue; -fx-text-fill: #FFF;" text="Salvar" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="30.0" />
+            <VBox layoutX="650.0" layoutY="335.0" prefHeight="43.0" spacing="3.0" AnchorPane.rightAnchor="30.0" />
+            <Button fx:id="cancelarButton" layoutX="399.0" layoutY="420.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="126.0" style="-fx-text-fill: #888;" text="Cancelar" AnchorPane.bottomAnchor="25.0" />
+            <Label graphicTextGap="8.0" layoutX="36.0" layoutY="419.0" style="-fx-text-fill: #999;" text="Observação (Opcional)">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/home-notification.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="observacaoField" layoutX="30.0" layoutY="441.0" prefHeight="93.0" prefWidth="291.0" style="-fx-border-color: red;" styleClass="textfield-editing" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
